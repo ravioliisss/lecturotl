@@ -1,0 +1,34 @@
+# Lecturotl
+
+A local lecture note reader with text-to-speech and AI chat.
+Load your notes, have them read aloud, and ask your AI assistant questions about what you're reading.
+
+> Linux only for now.
+
+## Requirements
+- Python 3.10+
+- [Piper TTS](https://github.com/rhasspy/piper/releases) binary + a voice model
+- A free [Groq API key](https://console.groq.com)
+
+## Setup
+
+```bash
+
+git clone https://github.com/ravioliisss/lecturotl.git
+
+cd lecturotl
+
+pip install -r requirements.txt
+
+cp .env.example .env
+
+# edit .env with your Piper path and Groq API key
+python main.py
+```
+
+## .env
+```
+PIPER_BINARY=/path/to/piper
+VOICE_MODEL=/path/to/voices/en_US-kristin-medium.onnx
+API_KEY=your_groq_key
+```
